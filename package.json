@@ -1,0 +1,32 @@
+{
+  "name": "products",
+  "version": "1.0.0",
+  "description": "products",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon ./server/app.js",
+    "seed": "node productSeed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hack-Reactor-Earth/Products.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hack-Reactor-Earth/Products/issues"
+  },
+  "homepage": "https://github.com/Hack-Reactor-Earth/Products#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "node": "^16.0.0",
+    "nodemon": "^2.0.7",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.3",
+    "postgres": "^1.0.2",
+    "sequelize": "^6.6.2"
+  }
+}
