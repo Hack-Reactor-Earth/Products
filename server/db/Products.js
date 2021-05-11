@@ -62,7 +62,7 @@ const Feature = db.define('feature', {
 Feature.belongsTo(Product);
 
 const Style = db.define('style', {
-  id: {
+  style_id: {
     type: Sequelize.INTEGER,
     primaryKey: true
   },
@@ -76,8 +76,8 @@ const Style = db.define('style', {
   original_price: {
     type: Sequelize.INTEGER
   },
-  default_style: {
-    type: Sequelize.INTEGER
+  "default?": {
+    type: Sequelize.BOOLEAN
   }
 }, { timestamps: false });
 
@@ -112,6 +112,19 @@ const Photo = db.define('photo', {
 }, { timestamps: false });
 
 Photo.belongsTo(Style);
+
+Product.hasMany(Feature);
+Product.hasMany(Style);
+
+Style.hasMany(Sku);
+Style.hasMany(Photo);
+
+Product.sync();
+Relate.sync();
+Feature.sync();
+Style.sync();
+Sku.sync();
+Photo.sync();
 
 module.exports = { Product, Relate, Feature, Style, Sku, Photo };
 

@@ -1,5 +1,5 @@
-const database = require('./server/db/database.js');
-const Product = require('./server/db/Products.js');
+// const database = require('./server/db/database.js');
+// const Product = require('./server/db/Products.js');
 
 // let Products = [];
 
