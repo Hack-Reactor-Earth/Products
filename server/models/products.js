@@ -10,7 +10,7 @@ const getAllProducts =  async (page, count) => {
     offset = (pages - 1) * limit;
   }
   try {
-   const response = await Product.findAll({ limit: limit });
+   const response = await Product.findAll({ offset: offset, limit: limit });
    console.log('proucts response --->', response);
    return response;
   } catch (err) {
