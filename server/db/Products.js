@@ -64,7 +64,8 @@ Feature.belongsTo(Product);
 const Style = db.define('style', {
   style_id: {
     type: Sequelize.INTEGER,
-    primaryKey: true
+    primaryKey: true,
+    unique: true
   },
   name: {
     type: Sequelize.STRING
