@@ -120,12 +120,12 @@ Product.hasMany(Style);
 Style.hasMany(Sku);
 Style.hasMany(Photo);
 
-Product.sync();
-Relate.sync();
-Feature.sync();
-Style.sync();
-Sku.sync();
-Photo.sync();
+// Product.sync();
+// Relate.sync();
+// Feature.sync();
+// Style.sync();
+// Sku.sync();
+// Photo.sync();
 
 module.exports = { Product, Relate, Feature, Style, Sku, Photo };
 
