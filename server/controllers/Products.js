@@ -5,8 +5,11 @@ const products = require('../models/products.js');
 // const { Product, Relate, Feature, Style, Sku, Photo } = require('../db/Products.js');
 
 router.get('/', async (req, res) => {
+  console.log('products params --->', req.query)
+  let page = req.query.page;
+  let count = req.query.count
   try {
-    const response = await products.getAllProducts(1, 5);
+    const response = await products.getAllProducts(page, count);
     res.status(200).json(response);
   } catch (err) {
     console.log('err in app.get --->', err);

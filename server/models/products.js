@@ -11,7 +11,7 @@ const getAllProducts =  async (page, count) => {
   }
   try {
    const response = await Product.findAll({ offset: offset, limit: limit });
-   console.log('proucts response --->', response);
+  //  console.log('proucts response --->', response);
    return response;
   } catch (err) {
     console.log('err getting all products --->', err);
