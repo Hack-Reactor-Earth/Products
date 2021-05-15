@@ -17,6 +17,7 @@ app.use('/products/:product_id/styles', require('./controllers/styles.js'));
 app.use('/products/:product_id/related', require('./controllers/related.js'));
 app.use('/products/:product_id/skus', require('./controllers/skus.js'));
 
+
 // app.get('/', async (req, res) => {
 //   try {
 //     const response = await products.getAllProducts(1, 5);
